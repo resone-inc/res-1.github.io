@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://res-1.com/sitemap.xml
