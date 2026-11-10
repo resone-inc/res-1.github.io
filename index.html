@@ -191,6 +191,17 @@ img{max-width:100%;display:block;height:auto}
 .photo dd{margin:0;line-height:1.8}
 @media(max-width:480px){.photo{grid-template-columns:1fr;gap:20px}.photo .ph{max-width:240px}}
 
+/* コラム */
+.col-list{list-style:none;padding:0;border-top:1px solid var(--fg)}
+.col-list li{border-bottom:1px solid var(--line)}
+.col-list a{display:grid;grid-template-columns:8em 1fr;gap:16px;padding:18px 0;text-decoration:none;align-items:baseline}
+.col-list time{color:var(--muted);font-size:var(--fs-small);font-variant-numeric:tabular-nums}
+.col-list b{font-weight:700;line-height:1.7}
+.col-list a:hover b{text-decoration:underline;text-underline-offset:5px}
+.col-more{margin-top:18px;font-size:var(--fs-small)}
+.col-more a{color:var(--navy);text-underline-offset:5px}
+@media(max-width:520px){.col-list a{grid-template-columns:1fr;gap:0}}
+
 /* 会社概要 */
 .co{border-top:1px solid var(--fg);font-size:var(--fs-small)}
 .co div{display:grid;grid-template-columns:9em 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -293,6 +304,7 @@ img{max-width:100%;display:block;height:auto}
       <a href="#service">事業内容</a>
       <a href="#greeting">代表挨拶</a>
       <a href="#faq">よくあるご質問</a>
+      <a href="column.html">コラム</a>
       <a href="#company">会社概要</a>
       <a href="recruit.html">採用情報</a>
       <a href="#contact">お問い合わせ</a>
@@ -328,6 +340,7 @@ img{max-width:100%;display:block;height:auto}
     <div class="in">
       <h2>お知らせ</h2>
       <dl>
+        <div><dt>2026年11月</dt><dd>コラム「<a href="column-kyosai-chofuku.html">共済と民間保険、どこが重なるのか</a>」を掲載しました。</dd></div>
         <div><dt>2026年11月</dt><dd>ホームページを公開しました。</dd></div>
         <div><dt>2026年10月</dt><dd>日本生命保険相互会社の取扱いを開始しました（取扱保険会社は生命保険4社・損害保険1社になりました）。</dd></div>
         <div><dt>2026年3月3日</dt><dd>株式会社ResOneを設立しました。</dd></div>
@@ -475,6 +488,18 @@ img{max-width:100%;display:block;height:auto}
     </div>
   </section>
 
+  <section class="sec" id="column">
+    <div class="in">
+      <h2 class="rv">コラム</h2>
+      <div class="body">
+        <ul class="col-list rv">
+          <li><a href="column-kyosai-chofuku.html"><time datetime="2026-11-10">2026年11月10日</time><b>共済と民間保険、どこが重なるのか</b></a></li>
+        </ul>
+        <p class="col-more"><a href="column.html">コラム一覧</a></p>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="company">
     <div class="in">
       <h2 class="rv">会社概要</h2>
@@ -545,6 +570,7 @@ img{max-width:100%;display:block;height:auto}
       <p class="pl" style="margin-top:14px">会社</p>
       <ul>
         <li><a href="#company">会社概要</a></li>
+        <li><a href="column.html">コラム</a></li>
         <li><a href="recruit.html">採用情報</a></li>
       </ul>
     </div>

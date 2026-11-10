@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>共済と民間保険、どこが重なるのか｜株式会社ResOne</title>
+<link rel="canonical" href="https://res-1.com/column-kyosai-chofuku.html">
+<meta name="description" content="地方公務員・消防職員が持つ共済組合の給付と公務災害補償を整理し、民間の医療保険・就業不能保険と重なりやすい部分を解説します。">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap">
+<style>
+:root{--navy:#17365d;--bg:#fff;--fg:#222a35;--muted:#66707e;--line:#cfd4da;
+--mincho:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--gothic);font-size:15px;line-height:2;font-feature-settings:"palt"}
+a{color:inherit}
+.in{max-width:820px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.hd{border-bottom:1px solid var(--line)}
+.hd .in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.hd a{text-decoration:none;font-family:var(--mincho);font-size:1.1rem;letter-spacing:.06em}
+.hd .back{font-family:var(--gothic);font-size:.85rem;color:var(--muted)}
+.hd .lg{display:flex;align-items:center;gap:10px}
+.hd .lg img{height:40px;width:auto;display:block}
+main .in{padding-block:56px 80px}
+h1{font-family:var(--mincho);font-size:1.7rem;letter-spacing:.1em;color:var(--navy);font-weight:500;margin:0 0 8px}
+.date{color:var(--muted);font-size:.85rem;margin:0 0 36px}
+h2{font-size:1.05rem;font-weight:700;letter-spacing:.04em;margin:40px 0 10px;padding-left:12px;border-left:3px solid var(--navy)}
+p{margin:0 0 1em}
+ol,ul{margin:0 0 1em;padding-left:1.6em}
+li{margin-bottom:.3em}
+.sign{margin-top:48px;text-align:right;font-family:var(--mincho);letter-spacing:.06em}
+.ft{background:var(--navy);color:#fff;font-size:.82rem}
+.ft .in{padding-block:40px;display:grid;grid-template-columns:1fr auto;gap:24px 48px;align-items:start}
+.ft .nm{font-family:var(--mincho);font-size:1.1rem;letter-spacing:.08em;margin:0 0 6px}
+.ft p{margin:0;opacity:.85;line-height:1.9}
+.ft .cp{font-size:.72rem;opacity:.6;margin-top:10px}
+.ft .pl{font-size:.7rem;letter-spacing:.14em;opacity:.6;margin:0 0 4px}
+.ft ul{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.ft a{text-decoration:none;opacity:.9}
+.ft a:hover{opacity:1;text-decoration:underline}
+@media(max-width:620px){.ft .in{grid-template-columns:1fr}}
+.lead{font-family:var(--mincho);font-size:1.25rem;line-height:1.9;color:var(--navy);margin:0 0 28px}
+.photo{margin:32px 0 8px}
+.photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.photo figcaption{font-size:.65rem;color:var(--muted);text-align:right;letter-spacing:.08em;margin-top:4px}
+.tbl{border-top:1px solid var(--fg);font-size:.95rem;margin:12px 0 0}
+.tbl div{display:grid;grid-template-columns:9em 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tbl dt{color:var(--muted);letter-spacing:.06em}
+.tbl dd{margin:0;min-width:0}
+@media(max-width:480px){.tbl div{grid-template-columns:1fr;gap:0}}
+.cta{margin-top:40px;padding:28px 24px;background:#f5f6f4;border:1px solid var(--line)}
+.cta .big{font-family:var(--mincho);font-size:1.3rem;color:var(--navy);text-decoration:none;word-break:break-all}
+.cta p{margin:0 0 .6em}
+.lbtn{display:inline-block;background:#06c755;color:#fff;text-decoration:none;padding:14px 36px;letter-spacing:.1em;font-weight:700}
+.lbtn:hover{background:#05b04b}
+.crumb{font-size:.8rem;color:var(--muted);margin:0 0 20px}
+.crumb a{color:var(--muted)}
+.meta{color:var(--muted);font-size:.82rem;margin:0 0 32px}
+.art p{margin:0 0 1.2em}
+.art h2{margin-top:52px}
+.art h3{font-size:1rem;font-weight:700;margin:28px 0 8px}
+.point{background:#f5f6f4;border:1px solid var(--line);padding:20px 22px;margin:0 0 8px}
+.point p{margin:0}
+.point ul{margin:8px 0 0}
+.tw{overflow-x:auto;margin:16px 0 20px}
+table{border-collapse:collapse;width:100%;font-size:.88rem;line-height:1.7;min-width:520px}
+th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+thead th{border-bottom:1px solid var(--fg);font-weight:700;white-space:nowrap}
+tbody th{font-weight:700;white-space:nowrap}
+@media(max-width:560px){.tw::before{content:"表は横にスクロールできます";display:block;font-size:.75rem;color:var(--muted);margin-bottom:4px}}
+.note{font-size:.82rem;color:var(--muted);line-height:1.8}
+.src{font-size:.82rem;line-height:1.8;margin:8px 0 0;padding-left:1.4em}
+.src a{color:var(--navy);word-break:break-all}
+.next{margin-top:48px;padding:24px 22px;border:1px solid var(--line)}
+.next p{margin:0 0 12px}
+.lbtn{display:inline-block;background:#06c755;color:#fff;text-decoration:none;padding:12px 30px;letter-spacing:.08em;font-weight:700}
+.list{list-style:none;padding:0;margin:0;border-top:1px solid var(--fg)}
+.list li{border-bottom:1px solid var(--line);margin:0}
+.list a{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding:20px 0;text-decoration:none}
+.list a:hover b{text-decoration:underline;text-underline-offset:5px}
+.list time{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}
+.list b{display:block;font-weight:700;font-size:1.02rem;line-height:1.6}
+.list span{display:block;color:var(--muted);font-size:.88rem;line-height:1.8;margin-top:4px}
+@media(max-width:520px){.list a{grid-template-columns:1fr;gap:2px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="in"><a href="index.html" class="lg"><img src="img/logo.png" alt="ResOne" width="525" height="730">株式会社ResOne</a><a class="back" href="index.html">トップへ戻る</a></div></header>
+<main><div class="in">
+<p class="crumb"><a href="index.html">トップ</a>　／　<a href="column.html">コラム</a></p>
+<h1>共済と民間保険、どこが重なるのか</h1>
+<p class="meta">2026年11月10日　株式会社ResOne</p>
+<div class="art">
+
+<div class="point">
+<p>この記事の要点</p>
+<ul>
+<li>地方公務員は、共済組合の給付と公務災害補償という2つの制度をすでに持っています。</li>
+<li>民間保険と重なりやすいのは、入院・手術の医療費と、病気で働けない間の収入です。</li>
+<li>重なっているかどうかは、所属する共済組合の給付内容と、加入中の保険証券を並べれば確認できます。</li>
+</ul>
+</div>
+
+<h2>公務員がすでに持っている保障</h2>
+<p>消防職員を含む地方公務員には、民間の保険に入る前から備わっている保障があります。大きく分けると次の2つです。</p>
+<h3>共済組合の給付（公務外の病気・ケガ）</h3>
+<p>共済組合は、会社員でいう健康保険にあたります。医療費の自己負担は3割で、1か月の自己負担が一定額を超えると高額療養費が支給されます。ここまでは会社員と同じです。</p>
+<p>違いは、その先に共済組合独自の上乗せ（附加給付）があることです。たとえば地方職員共済組合では、高額療養費を差し引いたあとの自己負担が、同じ月・同じ医療機関で1件25,000円（標準報酬月額53万円以上の方は50,000円）を超えると、超えた分が「一部負担金払戻金」として戻ります。家族が受診した場合も、同じ基準で「家族療養費附加金」が支給されます。</p>
+<h3>公務災害補償（公務中・通勤中の病気・ケガ）</h3>
+<p>公務や通勤が原因の病気・ケガには、共済組合ではなく、地方公務員災害補償制度が使われます。必要な療養は療養補償として行われ、療養のために勤務できず給与を受けない場合は、1日につき平均給与額の60％の休業補償が支給されます。障害が残った場合は障害補償、亡くなった場合は遺族補償と葬祭補償があります。これらに加えて、福祉事業として休業援護金や各種の特別支給金が設けられています。</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>場面</th><th>公務外</th><th>公務中・通勤中</th></tr></thead>
+<tbody>
+<tr><th>治療費</th><td>自己負担3割。高額療養費と附加給付で、月の負担に上限がかかる</td><td>療養補償（必要な療養、またはその費用）</td></tr>
+<tr><th>働けない間の収入</th><td>傷病手当金（標準報酬日額の3分の2、1年6か月まで）。その後は傷病手当金附加金</td><td>休業補償（平均給与額の60％）と休業援護金</td></tr>
+<tr><th>障害が残ったとき</th><td>障害厚生年金など公的年金</td><td>障害補償（年金または一時金）と特別支給金など</td></tr>
+<tr><th>亡くなったとき</th><td>埋葬料（50,000円）、遺族厚生年金など公的年金</td><td>遺族補償、葬祭補償、特別支給金など</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">共済組合の給付は地方職員共済組合の公表内容による例です。法律で定められた給付は各共済組合で共通ですが、附加給付の有無や金額は組合ごとに異なります。</p>
+
+<h2>重なりやすいところ</h2>
+<h3>入院・手術の医療保険</h3>
+<p>医療保険は、入院1日あたりいくら、手術1回あたりいくら、という形で給付されます。一方で、共済組合の附加給付がある場合、保険診療の自己負担は月あたり一定額で止まります。上の例なら、1つの医療機関での自己負担は月25,000円が目安です。</p>
+<p>つまり、保険診療の範囲に限れば、民間の医療保険で大きな金額を用意する必要性は高くありません。日額の高い医療保険に複数入っている場合は、制度と重なっている可能性があります。</p>
+<p>制度の対象にならない費用もあります。差額ベッド代、入院中の食事代の自己負担、先進医療の技術料などです。医療保険を検討するなら、こうした対象外の費用をどこまで備えるか、という見方になります。</p>
+<h3>働けない間の収入を補う保険</h3>
+<p>公務外の病気やケガで勤務できず給与が出ない場合、共済組合から傷病手当金が支給されます。金額は標準報酬日額の3分の2で、期間は1年6か月までです。地方職員共済組合では、その後も同じ病気やケガで勤務できないときに、傷病手当金附加金が支給されます。</p>
+<p>これとは別に、病気休暇や休職の期間中に給与がどこまで支給されるかは、勤務先の自治体の条例で決まっています。傷病手当金は、給与が支給されなくなった、または減額されたあとの制度です。</p>
+<p>就業不能保険や所得補償保険に入っている場合は、給与と傷病手当金で補われる期間と、保険が支払われる期間が重なっていないかを確認する必要があります。</p>
+
+<h2>制度だけでは決まらないところ</h2>
+<p>公務外で亡くなった場合、共済組合から支給されるのは埋葬料です。遺された家族の生活費は、遺族厚生年金などの公的年金と、退職手当、貯蓄、そして民間の死亡保障で考えることになります。必要な金額は、家族構成、子どもの年齢、住宅ローンの有無で大きく変わります。</p>
+<p>公務中の死亡には遺族補償がありますが、公務外の死亡には適用されません。「公務員は保障が手厚い」という話は、どの場面のことかを分けて見る必要があります。</p>
+
+<h2>確認の手順</h2>
+<ol>
+<li>所属する共済組合のホームページか「共済のしおり」で、短期給付と附加給付の一覧を確認する。</li>
+<li>加入中の保険の証券（または契約内容のお知らせ）をすべて並べる。職場で加入した団体保険や任意の共済も含める。</li>
+<li>「治療費」「働けない間の収入」「亡くなったとき」の3つに分けて、制度で出るものと保険で出るものを書き出す。</li>
+<li>同じ場面で両方から出ているところが重なりです。どちらからも出ていないところが、検討する部分です。</li>
+</ol>
+
+<h2>注意点</h2>
+<p>この記事は制度の概要を説明するもので、特定の保険商品を勧めるものではありません。記載した金額と割合は、記事の公開時点で各機関が公表している内容に基づいています。制度は改正されることがあり、共済組合によって附加給付の内容が異なります。ご自身の給付内容は、所属の共済組合と勤務先の人事担当に確認してください。</p>
+
+<h2>出典</h2>
+<ul class="src">
+<li>地方職員共済組合「医療費が高額になったとき」 <a href="https://www.chikyosai.or.jp/division/short/scene/disaster/03.html" target="_blank" rel="noopener">https://www.chikyosai.or.jp/division/short/scene/disaster/03.html</a></li>
+<li>地方職員共済組合 埼玉県支部「短期給付の種類」 <a href="https://saitama.chikyosai.or.jp/tanki/" target="_blank" rel="noopener">https://saitama.chikyosai.or.jp/tanki/</a></li>
+<li>地方公務員災害補償基金「補償の種類」 <a href="https://www.chikousai.go.jp/gyoumu/hosyou/hosyou-list.php" target="_blank" rel="noopener">https://www.chikousai.go.jp/gyoumu/hosyou/hosyou-list.php</a></li>
+<li>地方公務員災害補償基金「補償と福祉事業の関係」 <a href="https://www.chikousai.go.jp/gyoumu/hosyou/hosyou-kankei.php" target="_blank" rel="noopener">https://www.chikousai.go.jp/gyoumu/hosyou/hosyou-kankei.php</a></li>
+</ul>
+
+<div class="next">
+<p>ご自身の共済と保険を並べて確認したい方は、公式LINEからご連絡ください。契約の有無にかかわらず、現状の整理をお手伝いします。</p>
+<p style="margin:0"><a class="lbtn" href="https://lin.ee/uGL222C" target="_blank" rel="noopener">LINEで相談する</a></p>
+</div>
+</div>
+</div></main>
+<footer class="ft"><div class="in">
+<div><p class="nm">株式会社ResOne</p><p>〒339-0056 埼玉県さいたま市岩槻区加倉5-5-26<br>TEL 080-2028-7637</p><p class="cp">© 2026 ResOne Inc.</p></div>
+<div class="pol"><p class="pl">方針</p><ul>
+<li><a href="kanyu-hoshin.html">勧誘方針</a></li>
+<li><a href="privacy.html">個人情報保護方針</a></li>
+<li><a href="hokengyoho300.html">保険業法第300条について</a></li>
+<li><a href="fd-policy.html">お客様本位の業務運営に関する取組方針</a></li>
+</ul>
+<p class="pl" style="margin-top:14px">会社</p><ul>
+<li><a href="index.html#company">会社概要</a></li>
+<li><a href="column.html">コラム</a></li>
+<li><a href="recruit.html">採用情報</a></li>
+</ul></div>
+</div></footer>
+<script>
+try{history.scrollRestoration='manual'}catch(e){}
+addEventListener('pageshow',function(){if(!location.hash){scrollTo(0,0)}});
+</script>
+</body>
+</html>
