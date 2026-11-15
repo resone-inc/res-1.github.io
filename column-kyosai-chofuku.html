@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20261116">
+<link rel="stylesheet" href="css/site.css?v=20261117">
 <script>document.documentElement.className+=' js'</script>
 </head>
 <body>
@@ -62,7 +62,19 @@
 </ul>
 </div>
 
-<h2>公務員が<wbr>すでに<wbr>持っている<wbr>保障</h2>
+<nav class="toc" aria-label="目次">
+<p>目次</p>
+<ol>
+<li><a href="#have">公務員がすでに持っている保障</a></li>
+<li><a href="#overlap">重なりやすいところ</a></li>
+<li><a href="#beyond">制度だけでは決まらないところ</a></li>
+<li><a href="#steps">確認の手順</a></li>
+<li><a href="#notes">注意点</a></li>
+<li><a href="#sources">出典</a></li>
+</ol>
+</nav>
+
+<h2 id="have">公務員が<wbr>すでに<wbr>持っている<wbr>保障</h2>
 <p>消防職員を含む地方公務員には、民間の保険に入る前から備わっている保障があります。大きく分けると次の2つです。</p>
 <h3>共済組合の<wbr>給付<wbr>（公務外の<wbr>病気・ケガ）</h3>
 <p>共済組合は、会社員でいう健康保険にあたります。医療費の自己負担は3割で、1か月の自己負担が一定額を超えると高額療養費が支給されます。ここまでは会社員と同じです。</p>
@@ -74,16 +86,16 @@
 <table>
 <thead><tr><th>場面</th><th>公務外</th><th>公務中・通勤中</th></tr></thead>
 <tbody>
-<tr><th>治療費</th><td>自己負担3割。高額療養費と附加給付で、月の負担に上限がかかる</td><td>療養補償（必要な療養、またはその費用）</td></tr>
-<tr><th>働けない間の収入</th><td>傷病手当金（標準報酬日額の3分の2、1年6か月まで）。その後は傷病手当金附加金</td><td>休業補償（平均給与額の60％）と休業援護金</td></tr>
-<tr><th>障害が残ったとき</th><td>障害厚生年金など公的年金</td><td>障害補償（年金または一時金）と特別支給金など</td></tr>
-<tr><th>亡くなったとき</th><td>埋葬料（50,000円）、遺族厚生年金など公的年金</td><td>遺族補償、葬祭補償、特別支給金など</td></tr>
+<tr><th>治療費</th><td data-label="公務外">自己負担3割。高額療養費と附加給付で、月の負担に上限がかかる</td><td data-label="公務中・通勤中">療養補償（必要な療養、またはその費用）</td></tr>
+<tr><th>働けない間の収入</th><td data-label="公務外">傷病手当金（標準報酬日額の3分の2、1年6か月まで）。その後は傷病手当金附加金</td><td data-label="公務中・通勤中">休業補償（平均給与額の60％）と休業援護金</td></tr>
+<tr><th>障害が残ったとき</th><td data-label="公務外">障害厚生年金など公的年金</td><td data-label="公務中・通勤中">障害補償（年金または一時金）と特別支給金など</td></tr>
+<tr><th>亡くなったとき</th><td data-label="公務外">埋葬料（50,000円）、遺族厚生年金など公的年金</td><td data-label="公務中・通勤中">遺族補償、葬祭補償、特別支給金など</td></tr>
 </tbody>
 </table>
 </div>
 <p class="note">共済組合の給付は地方職員共済組合の公表内容による例です。法律で定められた給付は各共済組合で共通ですが、附加給付の有無や金額は組合ごとに異なります。</p>
 
-<h2>重なりやすい<wbr>ところ</h2>
+<h2 id="overlap">重なりやすい<wbr>ところ</h2>
 <h3>入院・手術の<wbr>医療保険</h3>
 <p>医療保険は、入院1日あたりいくら、手術1回あたりいくら、という形で給付されます。一方で、共済組合の附加給付がある場合、保険診療の自己負担は月あたり一定額で止まります。上の例なら、1つの医療機関での自己負担は月25,000円が目安です。</p>
 <p>つまり、保険診療の範囲に限れば、民間の医療保険で大きな金額を用意する必要性は高くありません。日額の高い医療保険に複数入っている場合は、制度と重なっている可能性があります。</p>
@@ -93,11 +105,11 @@
 <p>これとは別に、病気休暇や休職の期間中に給与がどこまで支給されるかは、勤務先の自治体の条例で決まっています。傷病手当金は、給与が支給されなくなった、または減額されたあとの制度です。</p>
 <p>就業不能保険や所得補償保険に入っている場合は、給与と傷病手当金で補われる期間と、保険が支払われる期間が重なっていないかを確認する必要があります。</p>
 
-<h2>制度だけでは<wbr>決まらない<wbr>ところ</h2>
+<h2 id="beyond">制度だけでは<wbr>決まらない<wbr>ところ</h2>
 <p>公務外で亡くなった場合、共済組合から支給されるのは埋葬料です。遺された家族の生活費は、遺族厚生年金などの公的年金と、退職手当、貯蓄、そして民間の死亡保障で考えることになります。必要な金額は、家族構成、子どもの年齢、住宅ローンの有無で大きく変わります。</p>
 <p>公務中の死亡には遺族補償がありますが、公務外の死亡には適用されません。「公務員は保障が手厚い」という話は、どの場面のことかを分けて見る必要があります。</p>
 
-<h2>確認の<wbr>手順</h2>
+<h2 id="steps">確認の<wbr>手順</h2>
 <ol>
 <li>所属する共済組合のホームページか「共済のしおり」で、短期給付と附加給付の一覧を確認する。</li>
 <li>加入中の保険の証券（または契約内容のお知らせ）をすべて並べる。職場で加入した団体保険や任意の共済も含める。</li>
@@ -105,10 +117,10 @@
 <li>同じ場面で両方から出ているところが重なりです。どちらからも出ていないところが、検討する部分です。</li>
 </ol>
 
-<h2>注意点</h2>
+<h2 id="notes">注意点</h2>
 <p>この記事は制度の概要を説明するもので、特定の保険商品を勧めるものではありません。記載した金額と割合は、記事の公開時点で各機関が公表している内容に基づいています。制度は改正されることがあり、共済組合によって附加給付の内容が異なります。ご自身の給付内容は、所属の共済組合と勤務先の人事担当に確認してください。</p>
 
-<h2>出典</h2>
+<h2 id="sources">出典</h2>
 <ul class="src">
 <li>地方職員共済組合「医療費が高額になったとき」 <a href="https://www.chikyosai.or.jp/division/short/scene/disaster/03.html" target="_blank" rel="noopener">https://www.chikyosai.or.jp/division/short/scene/disaster/03.html</a></li>
 <li>地方職員共済組合 埼玉県支部「短期給付の種類」 <a href="https://saitama.chikyosai.or.jp/tanki/" target="_blank" rel="noopener">https://saitama.chikyosai.or.jp/tanki/</a></li>
@@ -155,6 +167,6 @@
     </div>
   </div>
 </footer>
-<script src="js/site.js?v=20261116" defer></script>
+<script src="js/site.js?v=20261117" defer></script>
 </body>
 </html>

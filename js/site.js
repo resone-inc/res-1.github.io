@@ -35,6 +35,23 @@
       once.observe(dg);
     }
   }
+  // スマホ下部の固定ボタン：冒頭を過ぎたら出し、相談の案内が見えている間は隠す
+  var dock=d.querySelector('.cta-bar');
+  if(dock){
+    if(!('IntersectionObserver' in window)){dock.classList.add('is-on')}
+    else{
+      var st={top:false,end:false}, upd=function(){dock.classList.toggle('is-on',!st.top&&!st.end)};
+      var topEl=d.querySelector('.fv .act')||d.querySelector('.pg-head')||d.querySelector('.doc h1');
+      var endEls=[].slice.call(d.querySelectorAll('#contact .line-box, .cta-sec, .doc .cta, .doc .next'));
+      if(topEl){st.top=true;new IntersectionObserver(function(es){st.top=es[0].isIntersecting;upd()}).observe(topEl)}
+      if(endEls.length){
+        var seen={};
+        var eo=new IntersectionObserver(function(es){es.forEach(function(e){seen[endEls.indexOf(e.target)]=e.isIntersecting});st.end=Object.keys(seen).some(function(k){return seen[k]});upd()},{threshold:.15});
+        endEls.forEach(function(e){eo.observe(e)});
+      }
+      upd();
+    }
+  }
   // ページを開いたときは先頭から
   try{history.scrollRestoration='manual'}catch(e){}
   addEventListener('pageshow',function(){if(!location.hash){scrollTo(0,0)}});
