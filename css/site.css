@@ -3,26 +3,26 @@
   --mincho:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;
   --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
   /* 文字サイズの階層 */
-  --fs-h1:clamp(2rem,4.2vw,2.75rem);
-  --fs-h2:clamp(1.5rem,2.6vw,1.9rem);
+  --fs-h1:clamp(2rem,5.2vw,3rem);
+  --fs-h2:clamp(1.5rem,3.6vw,2.125rem);
   --fs-h3:1.125rem;
-  --fs-lead:1.125rem;
+  --fs-lead:clamp(1.0625rem,1.6vw,1.1875rem);
   --fs-body:1rem;
   --fs-small:.875rem;
   --fs-cap:.75rem;
   /* 余白 */
-  --sec:clamp(64px,9vw,112px);
-  --gutter:max(20px,env(safe-area-inset-left,0px));
+  --sec:clamp(72px,11vw,136px);
+  --gutter:max(22px,env(safe-area-inset-left,0px));
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--gothic);font-size:var(--fs-body);line-height:1.95;font-feature-settings:"palt";letter-spacing:.01em}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--gothic);font-size:var(--fs-body);line-height:1.95;font-feature-settings:"palt";letter-spacing:.02em;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 h1,h2,h3,h4{margin:0;font-weight:500;line-height:1.5;text-wrap:balance}
 p,ul,dl{margin:0}
 img{max-width:100%;display:block;height:auto}
-.in{max-width:1080px;margin:0 auto;padding-left:var(--gutter);padding-right:max(20px,env(safe-area-inset-right,0px))}
+.in{max-width:1120px;margin:0 auto;padding-left:var(--gutter);padding-right:max(22px,env(safe-area-inset-right,0px))}
 .sp{display:none}
 
 /* ヘッダー */
@@ -30,7 +30,7 @@ img{max-width:100%;display:block;height:auto}
 .hd .in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo img{width:auto;height:46px}
-.logo .n{font-family:var(--mincho);font-size:1.2rem;letter-spacing:.06em;line-height:1.15}
+.logo .n{font-family:var(--mincho);font-size:1.25rem;letter-spacing:.08em;line-height:1.2}
 .logo .n small{display:block;font-family:var(--gothic);font-size:var(--fs-cap);letter-spacing:.1em;color:var(--muted);margin-top:5px}
 .gnav{display:flex;align-items:center;gap:26px;font-size:var(--fs-small);letter-spacing:.06em}
 .gnav a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s;white-space:nowrap}
@@ -98,9 +98,9 @@ img{max-width:100%;display:block;height:auto}
 }
 
 /* セクション共通 */
-.sec .in{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px 64px;padding-block:var(--sec)}
+.sec .in{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px 72px;padding-block:var(--sec)}
 .sec+.sec .in{border-top:1px solid var(--line)}
-.sec h2{font-family:var(--mincho);font-size:var(--fs-h2);letter-spacing:.08em;color:var(--navy);position:sticky;top:32px;align-self:start;line-height:1.4}
+.sec h2{font-family:var(--mincho);font-size:var(--fs-h2);letter-spacing:.08em;color:var(--navy);position:sticky;top:32px;align-self:start;line-height:1.55}
 .sec h2 small{display:block;font-family:var(--gothic);font-size:var(--fs-cap);letter-spacing:.14em;color:var(--muted);margin-top:12px;font-weight:400}
 .body{max-width:40em;min-width:0}
 .body>p+p{margin-top:1.2em}
@@ -285,7 +285,7 @@ img{max-width:100%;display:block;height:auto}
 /* 下層ページの見出し帯 */
 .pg-head{background:var(--bg-2);border-bottom:1px solid var(--line)}
 .pg-head .in{padding-block:clamp(32px,5vw,56px)}
-.pg-head h1{font-family:var(--mincho);font-size:clamp(1.6rem,3.2vw,2.2rem);letter-spacing:.1em;color:var(--navy);line-height:1.4}
+.pg-head h1{font-family:var(--mincho);font-size:clamp(1.75rem,4.4vw,2.5rem);letter-spacing:.1em;color:var(--navy);line-height:1.4}
 .crumb{font-size:var(--fs-cap);color:var(--muted);margin:0 0 12px;letter-spacing:.04em}
 .crumb a{color:var(--muted);text-underline-offset:3px}
 .pg-head+.sec .in{border-top:0}
@@ -314,9 +314,9 @@ img{max-width:100%;display:block;height:auto}
 .ft{margin-top:0}
 
 /* 文書型ページ（方針・採用・コラム） */
-.in.narrow{max-width:820px}
+.in.narrow{max-width:840px}
 .doc .in{padding-block:clamp(40px,6vw,64px) clamp(56px,8vw,96px)}
-.doc h1{font-family:var(--mincho);font-size:clamp(1.5rem,3vw,1.9rem);letter-spacing:.08em;color:var(--navy);margin:0 0 10px;line-height:1.5}
+.doc h1{font-family:var(--mincho);font-size:clamp(1.5rem,3.6vw,2.125rem);letter-spacing:.08em;color:var(--navy);margin:0 0 10px;line-height:1.5}
 .doc .date,.doc .meta{color:var(--muted);font-size:var(--fs-small);margin:0 0 36px}
 .doc h2{font-size:1.1rem;font-weight:700;letter-spacing:.04em;margin:48px 0 12px;padding-left:12px;border-left:3px solid var(--navy);line-height:1.6}
 .doc h3{font-size:1rem;font-weight:700;margin:28px 0 8px}
@@ -390,3 +390,6 @@ img{max-width:100%;display:block;height:auto}
 .dg-note{margin-top:14px;font-size:var(--fs-cap);color:var(--muted);line-height:1.8}
 @media(max-width:560px){.dg-chart{--th:48px}.dg-bar{font-size:.75rem;padding:0 10px}.dg-bar.pub{width:66%}.dg-bar.pri{left:32%;width:68%}.dg-overlap{left:32%;width:34%}.dg.is-after .dg-bar.pri{left:66%;width:28%}.dg.is-after .dg-scale i{width:94%}}
 @media(prefers-reduced-motion:reduce){.dg-bar,.dg-scale i,.dg-overlap{transition:none}.dg-say p{animation:none!important}}
+
+/* 見出しは言葉の切れ目で折り返す */
+h1,h2,h3,summary,.fv-lead,.intro,.lead,.line-h,.dg-say p,.col-list b,.list b{word-break:keep-all;overflow-wrap:anywhere}
