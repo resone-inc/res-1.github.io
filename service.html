@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20261112">
+<link rel="stylesheet" href="css/site.css?v=20261115">
 <script>document.documentElement.className+=' js'</script>
 </head>
 <body>
@@ -61,24 +61,29 @@
       <div class="body">
         <p class="intro rv">消防士の勤務と制度を知っているので、「入らなくていい保険」も言えます。</p>
         <p>民間の保険を検討する前に、消防職員には確認しておくべき制度がいくつもあります。公務災害補償、消防職員共済、傷病手当、退職手当。これらを一覧にして足りない部分を特定してから、はじめて保険商品の話をします。重複している契約があれば、やめる提案をします。</p>
-        <figure class="fig rv">
-          <div class="bars">
-            <p class="bars-h">よくある状態</p>
-            <div class="row overlap">
-              <div class="bar navy" style="width:62%">公務災害補償・共済・社会保障<small>すでにある保障</small></div>
-              <div class="bar dash" style="left:38%;width:62%">内容を把握せずに入った民間保険</div>
-            </div>
-            <p class="bars-note"><span class="ov"></span>重なっている部分の保険料は無駄になっている</p>
-
-            <p class="bars-h">ResOneの考え方</p>
-            <div class="row two">
-              <div class="bar navy" style="width:62%">公務災害補償・共済・社会保障<small>すでにある保障</small></div>
-              <div class="bar orange" style="width:30%">足りない分だけ保険</div>
-            </div>
-            <p class="bars-scale"><span></span>必要な保障の全体（ご家族構成・年齢で変わります）</p>
+        <div class="dg rv" id="diagram">
+          <div class="dg-seg" role="group" aria-label="図の切り替え">
+            <button type="button" aria-pressed="true" data-v="before">よくある状態</button>
+            <button type="button" aria-pressed="false" data-v="after">整理したあと</button>
           </div>
-          <figcaption>先に「すでにある保障」を確認してから、不足分だけを提案します。</figcaption>
-        </figure>
+          <div class="dg-chart" aria-hidden="true">
+            <div class="dg-row">
+              <span class="dg-name">制度で備わっている保障</span>
+              <div class="dg-track"><div class="dg-bar pub">公務災害補償・共済・社会保障</div></div>
+            </div>
+            <div class="dg-row">
+              <span class="dg-name">民間の保険</span>
+              <div class="dg-track"><div class="dg-bar pri"><span class="dg-pri-t">内容を知らずに入った保険</span></div></div>
+            </div>
+            <div class="dg-overlap"><span>重なり</span></div>
+            <div class="dg-scale"><i></i><span>必要な保障</span></div>
+          </div>
+          <div class="dg-say" aria-live="polite">
+            <p class="b">制度で出る分と、保険で出る分が重なっている。<span class="ib">重なった分の保険料は、無駄になっています。</span></p>
+            <p class="a">重なりをなくし、<span class="ib">足りない分だけを保険で補う。</span><span class="ib">これがResOneの考え方です。</span></p>
+          </div>
+          <p class="dg-note">図は考え方を示すものです。重なりの大きさや足りない分は、ご家族構成、年齢、加入中の保険によって一人ひとり異なります。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -167,6 +172,6 @@
     </div>
   </div>
 </footer>
-<script src="js/site.js?v=20261112" defer></script>
+<script src="js/site.js?v=20261115" defer></script>
 </body>
 </html>

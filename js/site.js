@@ -16,6 +16,25 @@
     d.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false)}});
     d.addEventListener('click',function(e){if(hd.classList.contains('nav-open')&&!hd.contains(e.target)){setOpen(false)}});
   }
+  // 図の切り替え
+  var dg=d.getElementById('diagram');
+  if(dg){
+    var bs=[].slice.call(dg.querySelectorAll('.dg-seg button')), lab=dg.querySelector('.dg-pri-t'), touched=false;
+    var setView=function(v){
+      var after=v==='after';
+      dg.classList.toggle('is-after',after);
+      bs.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-v')===v))});
+      lab.textContent=after?'足りない分':'内容を知らずに入った保険';
+    };
+    bs.forEach(function(b){b.addEventListener('click',function(){touched=true;setView(b.getAttribute('data-v'))})});
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window&&!reduce){
+      var once=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){once.disconnect();setTimeout(function(){if(!touched){setView('after')}},2200)}
+      })},{threshold:.6});
+      once.observe(dg);
+    }
+  }
   // ページを開いたときは先頭から
   try{history.scrollRestoration='manual'}catch(e){}
   addEventListener('pageshow',function(){if(!location.hash){scrollTo(0,0)}});

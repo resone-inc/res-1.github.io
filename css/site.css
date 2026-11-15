@@ -360,3 +360,33 @@ img{max-width:100%;display:block;height:auto}
 .doc .list b{display:block;font-weight:700;line-height:1.6}
 .doc .list span{display:block;color:var(--muted);font-size:var(--fs-small);line-height:1.8;margin-top:4px}
 @media(max-width:520px){.doc .list a{grid-template-columns:1fr;gap:2px}}
+
+/* 図（切り替え式） */
+.ib{display:inline-block}
+.dg{--ease:cubic-bezier(.22,.61,.36,1);margin:40px 0 8px;background:var(--bg);border:1px solid var(--line);padding:clamp(22px,4vw,40px)}
+.dg-seg{display:inline-grid;grid-template-columns:1fr 1fr;border:1px solid var(--navy);border-radius:2px;overflow:hidden}
+.dg-seg button{appearance:none;-webkit-appearance:none;border:0;border-radius:0;background:transparent;color:var(--navy);font:inherit;font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;padding:11px 20px;min-height:44px;cursor:pointer;transition:background .25s,color .25s}
+.dg-seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.dg-seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.dg-chart{--th:54px;margin-top:30px;position:relative;display:grid;gap:10px}
+.dg-row{display:grid;gap:6px}
+.dg-name{font-size:var(--fs-cap);letter-spacing:.12em;color:var(--muted);height:18px;line-height:18px;white-space:nowrap}
+.dg-track{position:relative;height:var(--th)}
+.dg-bar{position:absolute;z-index:1;top:0;bottom:0;display:flex;align-items:center;padding:0 14px;font-size:var(--fs-small);font-weight:500;line-height:1.35;letter-spacing:.04em;white-space:nowrap;overflow:hidden;transition:left .9s var(--ease),width .9s var(--ease),background .6s,color .6s,border-color .6s}
+.dg-bar.pub{left:0;width:60%;background:var(--navy);color:#fff}
+.dg-bar.pri{left:34%;width:66%;border:1.5px dashed var(--accent);color:var(--accent);background:rgba(232,84,30,.06)}
+.dg-overlap{position:absolute;z-index:0;left:34%;width:26%;top:24px;height:calc(var(--th)*2 + 34px);background:repeating-linear-gradient(135deg,rgba(232,84,30,.22) 0 6px,rgba(232,84,30,.06) 6px 12px);pointer-events:none;transition:opacity .5s}
+.dg-overlap span{position:absolute;left:50%;top:calc(var(--th) + 17px);transform:translate(-50%,-50%);font-size:var(--fs-cap);font-weight:700;letter-spacing:.14em;color:var(--accent);background:var(--bg);padding:2px 8px;white-space:nowrap;line-height:1.5}
+.dg.is-after .dg-bar.pri{left:60%;width:28%;background:var(--accent);color:#fff;border-color:var(--accent);border-style:solid}
+.dg.is-after .dg-overlap{opacity:0}
+.dg-scale{position:relative;height:24px;margin-top:4px}
+.dg-scale i{position:absolute;left:0;top:0;height:8px;width:100%;border:1px solid var(--line);border-top:0;transition:width .9s var(--ease)}
+.dg.is-after .dg-scale i{width:88%}
+.dg-scale span{position:absolute;left:0;top:12px;font-size:var(--fs-cap);color:var(--muted);letter-spacing:.06em;white-space:nowrap;line-height:1.2}
+.dg-say{margin-top:32px;min-height:3.8em;font-family:var(--mincho);font-size:clamp(1.0625rem,2vw,1.2rem);letter-spacing:.05em;line-height:1.85;color:var(--navy)}
+.dg-say p{display:none}
+.dg:not(.is-after) .dg-say .b,.dg.is-after .dg-say .a{display:block;animation:dgsay .5s var(--ease)}
+@keyframes dgsay{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.dg-note{margin-top:14px;font-size:var(--fs-cap);color:var(--muted);line-height:1.8}
+@media(max-width:560px){.dg-chart{--th:48px}.dg-bar{font-size:.75rem;padding:0 10px}.dg-bar.pub{width:66%}.dg-bar.pri{left:32%;width:68%}.dg-overlap{left:32%;width:34%}.dg.is-after .dg-bar.pri{left:66%;width:28%}.dg.is-after .dg-scale i{width:94%}}
+@media(prefers-reduced-motion:reduce){.dg-bar,.dg-scale i,.dg-overlap{transition:none}.dg-say p{animation:none!important}}
