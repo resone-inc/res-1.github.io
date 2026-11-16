@@ -72,8 +72,9 @@ img{max-width:100%;display:block;height:auto}
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .fv-body .act a:not(.btn){color:var(--navy);text-underline-offset:5px}
 .fv-img{margin:0;position:relative;overflow:hidden}
-.fv-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
-@media(min-width:860px){.fv-img{margin-top:48px}}
+.fv-img img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%}
+@media(max-width:859px){.fv-img{margin-inline:-22px}}
+@media(min-width:860px){.fv-img{margin-top:48px}.fv-img img{aspect-ratio:4/5}}
 .fv-img figcaption{position:absolute;right:8px;bottom:6px;font-size:var(--fs-cap);color:#fff;letter-spacing:.08em;text-shadow:0 0 4px rgba(0,0,0,.5)}
 @media(max-width:480px){.sp{display:inline}.fv h1{letter-spacing:.08em}.fv .lbl{letter-spacing:.04em;font-size:.8rem}}
 
@@ -408,10 +409,10 @@ h1,h2,h3,summary,.fv-lead,.intro,.lead,.line-h,.dg-say p,.col-list b,.list b{wor
 html{scroll-padding-top:96px}
 
 /* 冒頭：相談の条件 */
-.facts{list-style:none;padding:0;margin:36px 0 0;display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:34em}
-.facts li{flex:1 1 0;min-width:0;padding:14px 4px;text-align:center;font-size:var(--fs-small);line-height:1.5;border-left:1px solid var(--line)}
-.facts li:first-child{border-left:0}
-.facts b{display:block;font-family:var(--mincho);font-size:1.125rem;font-weight:500;color:var(--navy);letter-spacing:.06em;white-space:nowrap}
+.facts{margin:36px 0 0;max-width:26em;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:5.5em 1fr;align-items:baseline;padding:12px 2px;border-bottom:1px solid var(--line)}
+.facts dt{font-size:var(--fs-cap);color:var(--muted);letter-spacing:.14em}
+.facts dd{margin:0;font-family:var(--mincho);font-size:1.0625rem;color:var(--navy);letter-spacing:.06em;line-height:1.6}
 .js .fv .facts{opacity:1}
 
 /* コラム：目次 */
