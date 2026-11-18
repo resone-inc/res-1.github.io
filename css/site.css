@@ -446,3 +446,5 @@ html{scroll-padding-top:96px}
   .fv-below .facts{margin-top:0}
 }
 @media(prefers-reduced-motion:reduce){.fv-bg .sl{animation:none}.fv-bg .sl:first-child{opacity:1}}
+.band.low{height:clamp(150px,24vw,300px)}
+.band.low::after{display:none}
