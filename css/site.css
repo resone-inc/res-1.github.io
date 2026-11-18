@@ -422,26 +422,3 @@ html{scroll-padding-top:96px}
 .doc .toc li{margin:0}
 .doc .toc a{color:var(--navy);text-underline-offset:4px}
 @media(prefers-reduced-motion:reduce){.js .cta-bar{transition:none}}
-
-/* 冒頭の写真の切り替え */
-.fv .in{display:block;padding-block:0}
-.fv-hero{position:relative;overflow:hidden;background:var(--navy);min-height:clamp(440px,74svh,700px);display:flex;align-items:flex-end}
-.fv-bg{position:absolute;inset:0}
-.fv-bg .sl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fvslide 21s linear infinite;will-change:opacity,transform}
-.fv-bg .sl:nth-child(1){animation-delay:-1.4s;object-position:50% 45%}
-.fv-bg .sl:nth-child(2){animation-delay:5.6s}
-.fv-bg .sl:nth-child(3){animation-delay:12.6s}
-@keyframes fvslide{0%{opacity:0;transform:scale(1)}6.67%{opacity:1}33.33%{opacity:1}40%{opacity:0;transform:scale(1.09)}100%{opacity:0;transform:scale(1.09)}}
-.fv-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,31,58,.28) 0%,rgba(13,31,58,.4) 45%,rgba(13,31,58,.82) 100%)}
-.fv-hero .in{position:relative;z-index:1;width:100%;padding-block:clamp(48px,8vw,88px) clamp(44px,6vw,72px)}
-.fv-hero .lbl{color:rgba(255,255,255,.88)}
-.fv-hero h1{color:#fff;border-left-color:#fff;text-shadow:0 1px 12px rgba(13,31,58,.45)}
-.fv-hero .fv-lead{color:#fff;margin-bottom:0;text-shadow:0 1px 10px rgba(13,31,58,.5)}
-.fv-cap{position:absolute;right:12px;bottom:8px;z-index:1;margin:0;font-size:.6875rem;letter-spacing:.06em;color:rgba(255,255,255,.7)}
-.fv .fv-below{padding-block:clamp(32px,4vw,56px) clamp(40px,6vw,72px)}
-.fv-below .act{margin-top:28px}
-@media(min-width:860px){
-  .fv-below .fv-body{max-width:none;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:start}
-  .fv-below .facts{margin-top:0}
-}
-@media(prefers-reduced-motion:reduce){.fv-bg .sl{animation:none}.fv-bg .sl:first-child{opacity:1}}
