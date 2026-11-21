@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /download/
 
 Sitemap: https://res-1.com/sitemap.xml
