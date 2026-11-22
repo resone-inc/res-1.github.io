@@ -2,4 +2,16 @@ User-agent: *
 Allow: /
 Disallow: /download/
 
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /download/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /download/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /download/
+
 Sitemap: https://res-1.com/sitemap.xml
