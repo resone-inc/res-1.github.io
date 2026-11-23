@@ -243,13 +243,12 @@ img{max-width:100%;display:block;height:auto}
 /* スマホ固定ボタン */
 .cta-bar{display:none}
 @media(max-width:760px){
-  .cta-bar{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--line);padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -2px 10px rgba(0,0,0,.06)}
+  .cta-bar{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:-webkit-sticky;position:sticky;bottom:0;z-index:20;background:var(--line);padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -2px 10px rgba(0,0,0,.06)}
   .cta-bar a{display:block;text-align:center;padding:15px 8px;text-decoration:none;font-size:.95rem;letter-spacing:.08em;font-weight:700}
   .cta-bar .c1{background:#059f47;color:#fff}
   .cta-bar .c2{background:#fff;color:var(--navy)}
-  body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px))}
-  .js .cta-bar{transform:translateY(110%);transition:transform .35s cubic-bezier(.22,.61,.36,1)}
-  .js .cta-bar.is-on{transform:none}
+  .js .cta-bar{opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+  .js .cta-bar.is-on{opacity:1;visibility:visible}
 }
 
 /* 動き */
@@ -462,3 +461,12 @@ html{scroll-padding-top:96px}
 @media(min-width:860px){.line-qr{display:flex;align-items:center;gap:12px;font-size:var(--fs-cap);color:var(--muted);line-height:1.6}.line-qr img{width:96px;height:96px;border:1px solid var(--line);background:#fff}}
 .line-free{font-size:var(--fs-small);color:var(--fg);line-height:1.8;margin:0}
 .line-gift{font-size:var(--fs-small);line-height:1.9;max-width:40em;margin:4px 0 0;padding:12px 16px;border-left:3px solid var(--accent);background:#fff}
+
+/* お知らせ：過去分の開閉 */
+.news-body{min-width:0}
+.news-more{margin-top:10px}
+.news-more summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;list-style:none;color:var(--navy);font-size:var(--fs-cap);letter-spacing:.08em;padding:6px 0;border-bottom:1px solid var(--navy)}
+.news-more summary::-webkit-details-marker{display:none}
+.news-more summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.news-more[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.news-more dl{margin-top:12px}

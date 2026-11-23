@@ -40,7 +40,8 @@
   if(dock){
     if(!('IntersectionObserver' in window)){dock.classList.add('is-on')}
     else{
-      var st={top:false,end:false}, upd=function(){dock.classList.toggle('is-on',!st.top&&!st.end)};
+      var st={top:false,end:false,foot:false}, upd=function(){dock.classList.toggle('is-on',st.foot||(!st.top&&!st.end))};
+      var ft=d.querySelector('.ft');if(ft){new IntersectionObserver(function(es){st.foot=es[0].isIntersecting;upd()}).observe(ft)}
       var topEl=d.querySelector('.fv .act')||d.querySelector('.pg-head')||d.querySelector('.doc h1');
       var endEls=[].slice.call(d.querySelectorAll('#contact .line-box, .cta-sec, .doc .cta, .doc .next'));
       if(topEl){st.top=true;new IntersectionObserver(function(es){st.top=es[0].isIntersecting;upd()}).observe(topEl)}
