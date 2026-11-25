@@ -470,3 +470,11 @@ html{scroll-padding-top:96px}
 .news-more summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
 .news-more[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
 .news-more dl{margin-top:12px}
+
+/* チェック表の案内 */
+.gift{display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:center;width:100%;max-width:34em;margin-top:6px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gift img{width:104px;height:auto;display:block;border:1px solid #c9ced6;box-shadow:0 2px 8px rgba(0,0,0,.08);background:#fff}
+.gift b{display:block;font-weight:700;line-height:1.6;letter-spacing:.03em}
+.gift span{display:block;font-size:var(--fs-small);line-height:1.8;margin-top:4px}
+@media(max-width:359px){.gift{grid-template-columns:84px 1fr;gap:14px}.gift img{width:84px}}
+.line-box .gift{border-bottom:0;padding-bottom:4px}
